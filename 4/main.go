@@ -9,6 +9,11 @@ import (
 	"time"
 )
 
+// Реализовать постоянную запись данных в канал (главный поток).
+// Реализовать набор из N воркеров, которые читают произвольные данные из канала и выводят в stdout.
+// Необходима возможность выбора количества воркеров при старте.
+// Программа должна завершаться по нажатию Ctrl+C. Выбрать и обосновать способ завершения работы всех воркеров.
+
 // On Windows a ^C (Control-C) or ^BREAK (Control-Break) normally cause the program to exit.
 // If Notify is called for os.Interrupt, ^C or ^BREAK will cause os.Interrupt to be sent on the channel,
 // and the program will not exit. If Reset is called, or Stop is called on all channels passed to Notify,

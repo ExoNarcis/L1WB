@@ -8,10 +8,9 @@ import (
 	"time"
 )
 
-// On Windows a ^C (Control-C) or ^BREAK (Control-Break) normally cause the program to exit.
-// If Notify is called for os.Interrupt, ^C or ^BREAK will cause os.Interrupt to be sent on the channel,
-// and the program will not exit. If Reset is called, or Stop is called on all channels passed to Notify,
-// then the default behavior will be restored.
+// Разработать программу, которая будет последовательно отправлять значения в канал,
+// а с другой стороны канала — читать. По истечению N секунд программа должна завершаться.
+
 func genchandata(ctx context.Context, chandata chan<- int) {
 	for { // циклично ждем
 		v := rand.Intn(100)
