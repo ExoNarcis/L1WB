@@ -1,4 +1,3 @@
-// эталонный main.go
 package main
 
 import (
