@@ -32,7 +32,7 @@ func changebin(i64 int64, i int, cb int) (int64, error) { // метод с ка�
 	return v, nil // вернем значение
 }
 
-func changebin2(i64 int64, i int, cb int) (int64, error) {
+func changebin2(i64 int64, i int, cb int) (int64, error) { // метод порязрядки
 	if cb != 1 && cb != 0 {
 		return 0, errors.New("cb != 0 or 1") // проверка на дурака
 	}

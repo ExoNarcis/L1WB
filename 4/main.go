@@ -18,6 +18,7 @@ import (
 // If Notify is called for os.Interrupt, ^C or ^BREAK will cause os.Interrupt to be sent on the channel,
 // and the program will not exit. If Reset is called, or Stop is called on all channels passed to Notify,
 // then the default behavior will be restored.
+
 func genchandata(ctx context.Context, chandata chan<- int) {
 	for { // циклично ждем
 		v := rand.Intn(100)
